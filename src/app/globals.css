@@ -6,3 +6,94 @@ body {
 	background: linear-gradient(to right, #210e2e ,#431058); 
   }
 
+:root {
+  --main-font: "Nominee";
+  --main-text: #fff;
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: var(--main-font);
+}
+
+.border {
+  border: 1px solid #ccc;
+}
+
+body {
+  background-color: var(--app_bg);
+  overflow-x: hidden;
+}
+
+.app-bg {
+  @apply text-[var(--main-text)];
+}
+
+@font-face {
+  font-family: "Redzone";
+  src: url("/fonts/VTFRedzone-Classic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nominee";
+  src: url("/fonts/Nominee-Medium.ttf") format("truetype");
+}
+
+.font-redzone {
+  font-family: "Redzone";
+}
+
+.font-nominee {
+  font-family: "Nominee";
+}
+
+@layer {
+  .col {
+      @apply flex flex-col flex-wrap;
+  }
+
+  .row {
+      @apply flex flex-row flex-wrap;
+  }
+
+  .center {
+      @apply items-center justify-center;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+}
+
+button {
+  @apply active:scale-90 transition-transform duration-200;
+}
+
+/* THEME */
+
+.round-gradient {
+  z-index: -1;
+  /* min-height: 100dvh; */
+  /* background: radial-gradient(#9500b3, #56b1fc, transparent); */
+  /* background: radial-gradient(circle at top right, #292442, #330e3a, #1d1b27); */
+}
+
+.dark.round-gradient {
+  background: radial-gradient(circle at top right, #292442, #1d1b27);
+}
+
+.light.round-gradient {
+  background: radial-gradient(circle at top right, #2b0a38, #1c192b);
+}
+
+.app-logo {
+  background: linear-gradient(
+      135deg,
+      rgba(33, 150, 243, 1) 10%,
+      rgba(218, 112, 214, 1) 30%,
+      rgba(255, 255, 255, 1) 90%,
+      rgba(255, 255, 255, 0.705) 2%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

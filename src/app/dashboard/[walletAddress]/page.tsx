@@ -7,6 +7,7 @@ import { getContract } from "thirdweb";
 import { baseSepolia, polygon, polygonAmoy } from "thirdweb/chains";
 import { deployPublishedContract } from "thirdweb/deploys";
 import { useActiveAccount, useReadContract } from "thirdweb/react"
+import Header from "@/components/Header";
 
 export default function DashboardPage() {
     const account = useActiveAccount();
@@ -27,6 +28,10 @@ export default function DashboardPage() {
     });
     
     return (
+        <>
+        <div className="container max-w-6xl mx-auto text-white">
+                <Header />
+                </div>
         <div className="mx-auto max-w-7xl px-4 mt-16 sm:px-6 lg:px-8">
             <div className="flex flex-row justify-between items-center mb-8">
                 <p className="text-4xl font-semibold text-white">Dashboard</p>
@@ -58,6 +63,7 @@ export default function DashboardPage() {
                 />
             )}
         </div>
+        </>
     )
 }
 

@@ -6,6 +6,7 @@ import { TierCard } from "@/components/TierCard";
 import { getContract, prepareContractCall, ThirdwebContract } from "thirdweb";
 import { polygonAmoy } from "thirdweb/chains";
 import { lightTheme, TransactionButton, useActiveAccount, useReadContract } from "thirdweb/react";
+import Header from "@/components/Header";
 
 export default function CampaignPage() {
     const account = useActiveAccount();
@@ -90,7 +91,11 @@ export default function CampaignPage() {
       });
     
     return (
-        <div className="mx-auto max-w-7xl px-2 mt-4 sm:px-6 lg:px-8">
+        <div>
+            <div className="container max-w-6xl mx-auto text-white">
+                <Header />
+            </div>
+            <div className="mx-auto max-w-7xl px-2 mt-4 sm:px-6 lg:px-8">
             <div className="flex flex-row justify-between items-center">
                 {!isLoadingName && (
                     <p className="text-4xl font-semibold text-white">{name}</p>
@@ -174,6 +179,7 @@ export default function CampaignPage() {
                     contract={contract}
                 />
             )}
+        </div>
         </div>
     );
 }

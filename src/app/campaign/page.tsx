@@ -5,6 +5,7 @@ import { polygonAmoy } from "thirdweb/chains";
 import { CROWDFUNDINFFACTORY } from "../constants/contracts";
 import { useReadContract } from "thirdweb/react";
 import CampaignCard from "@/components/CampaignCard";
+import Header from "@/components/Header";
 
 export default function Campaign() {
     const contract= getContract({
@@ -22,9 +23,13 @@ export default function Campaign() {
 
       console.log(campaigns);
     return (
-      <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
+      <div >
+        <div className="container max-w-6xl mx-auto text-white">
+        <Header />
+        </div>
+<main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
         <div className="py-10">
-            <h1 className="text-4xl font-bold text-white mb-4">Campaigns:</h1>
+            <h1 className="text-4xl uppercase font-redzone text-white mb-4">Campaigns:</h1>
             <div className="grid gird-cols-3 gap-4">
                 {!isLoading && campaigns &&(
                     campaigns.length > 0 ?(
@@ -41,6 +46,7 @@ export default function Campaign() {
         </div>
 
       </main>
+      </div>
     );
   }
   
