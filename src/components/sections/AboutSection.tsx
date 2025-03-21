@@ -2,9 +2,9 @@ import Heading from "@/components/Heading";
 import { SectionProps } from "@/app/types";
 
 const tags = [
-    "Wide range of platforms",
-    "World class artists",
-    "Any type of assets",
+    "Wide range of wallets",
+    "Impactful Causes",
+    "Any type of campaigns",
     "Fast payments",
 ];
 
@@ -15,12 +15,11 @@ export default function AboutSection() {
                 <Heading
                     className="max-w-[90%]"
                     heading="About Us"
-                    subHeading="Discover more Collect And Sell Rare NFTs"
+                    subHeading="Be a part of something bigger—support and fund!"
                 />
                 <span className="text-app_gray/80 leading-8 text-xl">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, eum
-                    praesentium? Numquam officiis totam consequuntur dignissimos alias,
-                    quae autem!
+                We’re a crowdfunding platform that helps turn ideas into reality. Whether you're launching a passion project, a startup, or a cause, we connect you with a community ready to back your vision.
+
                 </span>
                 <div className="row gap-2">
                     {tags.map((tag, i) => (

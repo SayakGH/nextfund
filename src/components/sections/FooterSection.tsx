@@ -17,7 +17,7 @@ export default function FooterSection() {
             {/* Left Section */}
             <div className="col gap-4 min-w-[200px] justify-between">
                 <div className="space-y-6">
-                    <h3 className="font-redzone text-4xl">Space.</h3>
+                    <h3 className="font-redzone text-4xl">Nextfund.</h3>
                     <div className="row gap-4">
                         {socialIcons.map((Icon, i) => (
                             <a

@@ -59,7 +59,6 @@ function App() {
                 <Popularity />
                 <AboutSection />
                 <FeaturesSection /> 
-                <CollectionSection />
                 <FAQSection />
                 <PromoSection />
                 <FooterSection />

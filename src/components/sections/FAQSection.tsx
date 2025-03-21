@@ -3,29 +3,36 @@ import QAComponent, { QAProps } from "@/components/Q&A";
 
 const questions: QAProps[] = [
     {
-        question: "What is the NFT-X Space?",
+        question: "What social campaigns can I fund here?",
+        answer: "Support causes like environmental projects, education, disaster relief, and social justice.",
     },
     {
-        question: "Where are your company branches located?",
+        question: "How does crowdfunding work for these campaigns?",
+        answer: "Pledge funds to support campaigns, and funds are released if the goal is met.",
     },
     {
-        question: "What is metamask?",
+        question: "What is Web3, and how does it help?",
+        answer: "Web3 uses blockchain for secure, transparent funding of social campaigns with crypto.",
     },
     {
-        question: "How can i buy, sell and mint NFT's?",
+        question: "Which cryptocurrencies can I use to pledge?",
+        answer: "You can use Ethereum (ETH), Binance Coin (BNB), and USDT (Tether).",
     },
     {
-        question: "What's the best selling liquid at the moment?",
+        question: "Will I get rewards for supporting a campaign?",
+        answer: "Some campaigns offer digital certificates or shoutouts, but rewards vary.",
     },
     {
-        question: "What is the Service fee?",
+        question: "What if a campaign doesn’t reach its goal?",
+        answer: "Your contribution is automatically refunded to your Web3 wallet.",
     },
     {
-        question: "How should i Start?",
+        question: "What are the benefits of Web3 for social campaigns?",
+        answer: "It offers transparency, security, global access, and lower fees for contributions.",
     },
     {
-        question: "What is the NFT-X Space?",
-        answer: "NFT-X Space is a newer way of connecting things that seamlessly integrates with the network.",
+        question: "How can I track a campaign’s impact?",
+        answer: "Check updates on our platform and verify fund usage on the blockchain.",
     },
 ];
 

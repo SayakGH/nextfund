@@ -12,21 +12,21 @@ const values = [
 const cards: CardProps[] = [
     {
         icon: <MdOutlineVerifiedUser size={44} color="#71dcf5" />,
-        title: "Strong Security",
+        title: "Web3 Security",
         description:
-            "Secure transaction and record information with 2-factor authentication (2FA)",
+            "Secure transactions with MetaMask and blockchain-powered 2FA protection.",
     },
     {
         icon: <RiWallet3Line size={44} color="#948fe8" />,
-        title: "Payment Options",
+        title: "Wallet Payments",
         description:
-            "Flexible payment of methods with Visa, Mastercard, Paypal, bank transfer",
+            "Flexible payment of methods with Ethereum (ETH), Binance Coin (BNB), and USDT (Tether)",
     },
     {
         icon: <AiOutlineCheckCircle size={44} color="#ea9bfa" />,
-        title: "Market Updated",
+        title: "Global Giving",
         description:
-            "The most accurate and trusted source for market cap, valuation, and cryptocurrency information",
+            "Join a global movement by contributing with cryptocurrencies like ETH, no matter where you are",
     },
 ];
 

@@ -3,18 +3,18 @@ import Heading from "@/components/Heading";
 const cards = [
     {
         id: 1,
-        title: "Fueling the Metaverse",
-        desc: "The Metaverse is the next generation of the internet. As of its earliest explorers, You will help fuel its expansion",
+        title: "Transparency",
+        desc: "All contributions and fund usage are recorded on the blockchain. Backers can verify every transaction, ensuring trust and accountability.",
     },
     {
         id: 2,
-        title: "Initial Metaverse Offering",
-        desc: "The Metaverse is the next generation of the internet. As of its earliest explorers, You will help fuel its expansion",
+        title: "Accessibility",
+        desc: "Anyone with a Web3 wallet can contribute using cryptocurrencies like ETH or USDT. This breaks down traditional banking barriers, enabling worldwide participation.",
     },
     {
         id: 3,
-        title: "Incubation",
-        desc: "The Metaverse is the next generation of the internet. As of its earliest explorers, You will help fuel its expansion",
+        title: "Secure Funding",
+        desc: "Smart contracts automatically manage pledges, releasing funds only if goals are met. This protects backers and ensures campaigns are funded fairly.",
     },
 ];
 

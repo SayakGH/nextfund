@@ -10,10 +10,9 @@ export default function PromoSection() {
             />
             <div className="bg-gradient-to-bl from-sky-700 via-purple-700 to-blue-800 rounded-3xl p-3 md:p-0 w-full sm:h-[320px] h-full absolute bottom-0 z-[-1] shadow-lg"></div>
             <article className="col gap-6 items-start justify-center h-[inherit] md:max-w-[40%] m-2 lg:-translate-y-10">
-                <h4 className="font-redzone text-6xl">Join Us now</h4>
+                <h4 className="font-redzone text-6xl">Start Funding.</h4>
                 <span className="text-gray-200">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem illo
-                    eaque fugiat pariatur error!
+                    Run crowdfunding campaigns to support your projects, leveraging web3 technology.
                 </span>
                 <Button outline>Join Tournament</Button>
             </article>
