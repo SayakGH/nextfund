@@ -4,7 +4,7 @@ import { client } from "../client";
 import { polygonAmoy } from "thirdweb/chains";
 import { CROWDFUNDINFFACTORY } from "../constants/contracts";
 import { useReadContract } from "thirdweb/react";
-import CampaignCard from "@/components/CampaignCard";
+import { MyCampaignCard } from "@/components/MyCampaignCard";
 import Header from "@/components/Header";
 
 export default function Campaign() {
@@ -25,27 +25,30 @@ export default function Campaign() {
     return (
       <div >
         <div className="container max-w-6xl mx-auto text-white">
-        <Header />
-        </div>
-<main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
-        <div className="py-10">
-            <h1 className="text-4xl uppercase font-redzone text-white mb-4">Campaigns:</h1>
-            <div className="grid gird-cols-3 gap-4">
-                {!isLoading && campaigns &&(
-                    campaigns.length > 0 ?(
-                        campaigns.map((campaign) => (
-                            <CampaignCard key={campaign.campaignAddress} campaignAddress={campaign.campaignAddress}/>
-                        ))
-                    ):(
-                        <p>No campaigns found</p>
-                    )
-                )}
-
-
-            </div>
-        </div>
-
-      </main>
+                        <Header />
+                        </div>
+                <div className="mx-auto max-w-7xl px-4 mt-16 sm:px-6 lg:px-8">
+                    <div className="flex flex-row justify-between items-center mb-8">
+                        <p className="text-4xl font-redzone text-white">Campaign</p>
+                      
+                    </div>
+                    {/* <p className="text-2xl font-semibold mb-4 text-white">My Campaigns:</p> */}
+                    <div className="grid grid-cols-3 gap-4">
+                        {!isLoading && (
+                            campaigns && campaigns.length > 0 ? (
+                                campaigns.map((campaign, index) => (
+                                    <MyCampaignCard
+                                        key={index}
+                                        contractAddress={campaign.campaignAddress}
+                                    />
+                                ))
+                            ) : (
+                                <p>No campaigns</p>
+                            )
+                        )}
+                    </div>
+                      </div>
+      
       </div>
     );
   }

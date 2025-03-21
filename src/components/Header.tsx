@@ -19,7 +19,7 @@ export default function Header() {
                     <Link href="/" className={`uppercase font-redzone`}>Home</Link>
                     <Link href="/campaign" className={`uppercase font-redzone`}>Explore</Link>
                     {account &&
-                <Link href={`/dashboard/${account?.address}`} className={`uppercase font-redzone`}>Dashboard</Link>
+                <Link href={`/dashboard`} className={`uppercase font-redzone`}>Dashboard</Link>
 }
                 </div>
             </div>

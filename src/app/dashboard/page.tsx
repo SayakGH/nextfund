@@ -4,13 +4,34 @@ import { CROWDFUNDINFFACTORY } from "@/app/constants/contracts";
 import { MyCampaignCard } from "@/components/MyCampaignCard";
 import { useState } from "react";
 import { getContract } from "thirdweb";
-import { baseSepolia, polygon, polygonAmoy } from "thirdweb/chains";
+import { polygonAmoy } from "thirdweb/chains";
 import { deployPublishedContract } from "thirdweb/deploys";
 import { useActiveAccount, useReadContract } from "thirdweb/react"
 import Header from "@/components/Header";
+import { SignedIn,SignedOut,UserButton } from "@clerk/nextjs";
+import { useUser } from '@clerk/nextjs';
+import Sidebar from "../testdashboard/components/Sidebar";
+import { DashboardSection } from "../testdashboard/types";
+
+
+
 
 export default function DashboardPage() {
     const account = useActiveAccount();
+    const { user } = useUser();
+    const email = user?.emailAddresses[0]?.emailAddress;
+    const username = user?.username;
+    console.log(email, username);
+    const [activeSection, setActiveSection] = useState<DashboardSection>('campaigns');
+      const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+
+    // const response = await fetch("/api/user", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify({ email, walletAddress }),
+    // });
+    // const data = await response.json();
+    // console.log(data);
     
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
@@ -20,25 +41,46 @@ export default function DashboardPage() {
         address: CROWDFUNDINFFACTORY,
     });
 
+
     // Get Campaigns
     const { data: myCampaigns, isLoading: isLoadingMyCampaigns, refetch } = useReadContract({
         contract: contract,
         method: "function getUserCampaigns(address _user) view returns ((address campaignAddress, address owner, string name, uint256 creationTime)[])",
         params: [account?.address as string]
     });
+
+    // const handleDisconnect = await disconnectWalletConnectSession({
+    //     session: account,
+    //     walletConnectClient: client,
+    //   });
     
     return (
         <>
+        <Sidebar 
+        activeSection={activeSection} 
+        setActiveSection={setActiveSection} 
+      />
         <div className="container max-w-6xl mx-auto text-white">
                 <Header />
                 </div>
         <div className="mx-auto max-w-7xl px-4 mt-16 sm:px-6 lg:px-8">
             <div className="flex flex-row justify-between items-center mb-8">
-                <p className="text-4xl font-semibold text-white">Dashboard</p>
+                <div className="flex flex-row items-center gap-4">
+                <SignedIn>
+                 <div className="hidden sm:block">
+                <UserButton/>
+                </div>
+                 </SignedIn>
+                <p className="text-4xl font-semibold text-white">{username}</p>
+                
+            
+                </div>
+                
                 <button
                     className="px-4 py-2 bg-blue-500 text-white rounded-md"
                     onClick={() => setIsModalOpen(true)}
                 >Create Campaign</button>
+                
             </div>
             <p className="text-2xl font-semibold mb-4 text-white">My Campaigns:</p>
             <div className="grid grid-cols-3 gap-4">
@@ -63,6 +105,7 @@ export default function DashboardPage() {
                 />
             )}
         </div>
+
         </>
     )
 }
