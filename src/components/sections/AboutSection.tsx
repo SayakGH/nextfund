@@ -18,7 +18,7 @@ export default function AboutSection() {
                     subHeading="Be a part of something bigger—support and fund!"
                 />
                 <span className="text-app_gray/80 leading-8 text-xl">
-                We’re a crowdfunding platform that helps turn ideas into reality. Whether you're launching a passion project, a startup, or a cause, we connect you with a community ready to back your vision.
+                We are a crowdfunding platform that helps turn ideas into reality. Whether you are launching a passion project, a startup, or a cause, we connect you with a community ready to back your vision.
 
                 </span>
                 <div className="row gap-2">
